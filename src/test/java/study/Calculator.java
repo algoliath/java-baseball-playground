@@ -1,41 +1,42 @@
 package study;
 
+import sun.tools.jstat.Operator;
+
 class Calculator {
     // requirements: priority of operations, ignore blanks
-    public int eval(String expression){
+    int eval(String expression){
         char[] ch = expression.toCharArray();
-        int acc_l=0, acc_h=0;
+        int accForLow=0, accForHigh=0, num=0;
         char lastSign='+';
         for(int i=0; i<ch.length; i++){
-            int num = 0;
-            if('0'<=ch[i]&&ch[i]<='9'){
-                while(i<ch.length&&'0'<=ch[i]&&ch[i]<='9'){
-                    num*=10;
-                    num+=(ch[i]-'0');
-                    i++;
-                }
+            char letter = ch[i];
+            if('0'<=letter&&letter<='9'){
+                num*=10;
+                num+=(letter-'0');
             }
-            if(i==ch.length||ch[i]=='+'||ch[i]=='-'||ch[i]=='*'||ch[i]=='/'){
-                switch(lastSign) {
-                    case '+':
-                        acc_l += acc_h;
-                        acc_h = num;
+            // letter !<-> lastSign (not interchangeable)
+            if(i==ch.length-1||Signs.isOperator(letter)){
+                switch(Signs.getSign(lastSign)) {
+                    case Add:
+                        accForLow += accForHigh;
+                        accForHigh = num;
                         break;
-                    case '-':
-                        acc_l += acc_h;
-                        acc_h = -num;
+                    case Subtract:
+                        accForLow += accForHigh;
+                        accForHigh = -num;
                         break;
-                    case '*':
-                        acc_h *= num;
+                    case Multiply:
+                        accForHigh *= num;
                         break;
-                    case '/':
-                        acc_h /= num;
+                    case Divide:
+                        accForHigh /= num;
                         break;
                 }
-                if(i<ch.length) lastSign = ch[i];
+                lastSign = letter;
+                num = 0; // initialization error
             }
         }
-        return acc_l+acc_h;
+        return accForLow+accForHigh;
     }
 }
 
