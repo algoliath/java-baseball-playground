@@ -48,13 +48,4 @@ public class StringTest {
              System.out.println();
          }
     }
-
-    @Test
-    @DisplayName("should throw exception when the string's index is out of bounds")
-    void shouldThrowOutOfBoundsException(int index, int size) {
-        assertThatThrownBy(() -> {
-            throw new Exception("boom");
-        }).isInstanceOf(IndexOutOfBoundsException.class)
-                .hasMessageContaining("index:%d, Size=%d", index, size);
-    }
 }
