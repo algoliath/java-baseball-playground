@@ -1,6 +1,6 @@
-package study;
+package baseballGame;
 
-class Ball {
+public class Ball {
     private final BallNumber ballNo;
     private final int position;
 

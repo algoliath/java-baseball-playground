@@ -1,4 +1,4 @@
-package study;
+package calculator;
 
 public enum Signs {
     Add, Subtract, Multiply, Divide, Nothing;

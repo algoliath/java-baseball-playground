@@ -41,13 +41,4 @@ public class SetTest {
         boolean contains = numbers.contains(input);
         assertThat(contains).isEqualTo(expected);
     }
-
-    // Test Case 구현
-    public static void main(String[] args){
-        SetTest JUnit = new SetTest();
-        JUnit.setUp();
-        System.out.println((JUnit.getSize()));
-        JUnit.containsElements_ShouldReturnTrueForElementsInSet(3);
-        JUnit.containsElements_ShouldGenerateTheExpectedResults(5, true);
-    }
 }

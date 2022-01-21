@@ -1,4 +1,4 @@
-package study;
+package baseballGame;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +15,7 @@ public class Balls {
     }
 
     // return the play result for each ball
-    protected BallStatus playBall(Ball player) {
+    public BallStatus playBall(Ball player) {
         return balls.stream()
                 .map((answer) -> answer.play(player))
                 .filter(BallStatus::falseIfNothing)
@@ -24,7 +24,7 @@ public class Balls {
     }
 
     // return the play result for the whole game
-    protected String playGame(List<Integer> playerList) {
+    public String playGame(List<Integer> playerList) {
         int[] bucket = new int[11]; // 0 ~ 10, 10 = null
         int matchNo = 0;
         int matchAll = 0;

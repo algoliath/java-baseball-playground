@@ -1,12 +1,12 @@
-package study;
+package baseballGame;
 
-public class PlayResult {
+class PlayResult {
     int nStrike, nBall;
-    public PlayResult(int nStrike, int nBall) {
+    PlayResult(int nStrike, int nBall) {
         this.nStrike = nStrike;
         this.nBall = nBall;
     }
-    public String report() {
+    String report() {
         if(nStrike==0 && nBall==0){
             return "낫띵";
         }

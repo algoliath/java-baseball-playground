@@ -1,21 +1,19 @@
-package study;
+package calculator;
 
-import sun.tools.jstat.Operator;
-
-class Calculator {
+public class Calculator {
     // requirements: priority of operations, ignore blanks
-    int eval(String expression){
+    public int eval(String expression){
         char[] ch = expression.toCharArray();
         int accForLow=0, accForHigh=0, num=0;
-        char lastSign='+';
+        char lastSign = '+';
         for(int i=0; i<ch.length; i++){
             char letter = ch[i];
             if('0'<=letter&&letter<='9'){
                 num*=10;
                 num+=(letter-'0');
             }
-            // letter !<-> lastSign (not interchangeable)
-            if(i==ch.length-1||Signs.isOperator(letter)){
+            // letter and lastSign not interchangeable
+            if(i==ch.length-1|| Signs.isOperator(letter)){
                 switch(Signs.getSign(lastSign)) {
                     case Add:
                         accForLow += accForHigh;

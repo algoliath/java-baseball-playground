@@ -1,4 +1,4 @@
-package study;
+package baseballGame;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +21,7 @@ public class BallNumber {
     }
 
     // static methods
-    static List<BallNumber> getBallNumbers(List<Integer> numList){
+    public static List<BallNumber> getBallNumbers(List<Integer> numList){
         List<BallNumber> ballNumList = new ArrayList<>();
         for(int num: numList){
             ballNumList.add(new BallNumber(num));
@@ -29,7 +29,7 @@ public class BallNumber {
         return ballNumList;
     }
 
-    static List<Integer> generateBallNumbers(List<BallNumber> com, int strike, int ball){
+    public static List<Integer> generateBallNumbers(List<BallNumber> com, int strike, int ball){
         // invariant: strike and ball should sum up to 3
         List<Integer> generated = new ArrayList<>();
         // generate strike

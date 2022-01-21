@@ -1,4 +1,4 @@
-package study;
+package baseballGame;
 
 class ResultView {
     ResultView(){

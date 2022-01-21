@@ -1,5 +1,9 @@
-package study;
+package study.baseballGameTest;
 
+import baseballGame.Ball;
+import baseballGame.BallNumber;
+import baseballGame.BallStatus;
+import baseballGame.Balls;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
