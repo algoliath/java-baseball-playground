@@ -9,7 +9,8 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 // comparing number to number
-class Balls2BallsTest {
+class Balls2BallsTest
+{
 
     Balls com;
     List<BallNumber> answer = BallNumber.getBallNumbers(Arrays.asList(1, 2, 3));

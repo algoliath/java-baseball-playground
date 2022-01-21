@@ -9,7 +9,8 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 // comparing digit to number
-class Balls2BallTest {
+class Balls2BallTest
+{
 
     Balls com;
     List<BallNumber> answer = BallNumber.getBallNumbers(Arrays.asList(1, 5, 6));

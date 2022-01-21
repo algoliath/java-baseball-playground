@@ -6,7 +6,8 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 // comparing digit to digit
-class Ball2BallTest {
+class Ball2BallTest
+{
     Ball com;
 
     @BeforeEach
@@ -15,7 +16,7 @@ class Ball2BallTest {
     }
 
     @Test
-    void strike() {
+    void strike(){
         Ball sample = new Ball(1, 3);
         BallStatus status = com.play(sample);
         assertThat(status).isEqualTo(BallStatus.Strike);
