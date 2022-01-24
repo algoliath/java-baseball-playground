@@ -5,7 +5,9 @@ import java.util.List;
 import java.util.Scanner;
 
 class Receiver {
+
     Scanner scanner;
+
     Receiver(){
         this.scanner = new Scanner(System.in);
     }

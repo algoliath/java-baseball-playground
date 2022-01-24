@@ -25,36 +25,36 @@ class Balls2BallsTest
     @Test
     void strike3() {
         List<Integer> player = BallNumber.generateBallNumbers(answer, 3, 0);
-        assertThat(com.playGame(player)).isEqualTo("3 strike 0 ball");
+        assertThat(com.play2Balls(player)).isEqualTo("3 strike 0 ball");
     }
 
     @Test
     void ball3() {
         List<Integer> player = BallNumber.generateBallNumbers(answer, 0, 3);
-        assertThat(com.playGame(player)).isEqualTo("0 strike 3 ball");
+        assertThat(com.play2Balls(player)).isEqualTo("0 strike 3 ball");
     }
 
     @Test
     void strike2() {
         List<Integer> player = BallNumber.generateBallNumbers(answer, 2, 0);
-        assertThat(com.playGame(player)).isEqualTo("2 strike 0 ball");
+        assertThat(com.play2Balls(player)).isEqualTo("2 strike 0 ball");
     }
 
     @Test
     void ball2() {
         List<Integer> player = BallNumber.generateBallNumbers(answer, 0, 2);
-        assertThat(com.playGame(player)).isEqualTo("0 strike 2 ball");
+        assertThat(com.play2Balls(player)).isEqualTo("0 strike 2 ball");
     }
 
     @Test
     void ball1() {
         List<Integer> player = BallNumber.generateBallNumbers(answer, 0, 1);
-        assertThat(com.playGame(player)).isEqualTo("0 strike 1 ball");
+        assertThat(com.play2Balls(player)).isEqualTo("0 strike 1 ball");
     }
 
     @Test
     void strike1_ball2() {
         List<Integer> player = BallNumber.generateBallNumbers(answer, 1, 2);
-        assertThat(com.playGame(player)).isEqualTo("1 strike 2 ball");
+        assertThat(com.play2Balls(player)).isEqualTo("1 strike 2 ball");
     }
 }

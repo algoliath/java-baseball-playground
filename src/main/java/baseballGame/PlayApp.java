@@ -19,7 +19,7 @@ class PlayApp {
         while(keep) {
             if (!game_result.equals("3 스트라이크")) {
                 List<Integer> playerList = receiver.getPlayerList();
-                game_result = targetBalls.playGame(playerList);
+                game_result = targetBalls.play2Balls(playerList);
                 sender.report(game_result);
                 continue;
             }

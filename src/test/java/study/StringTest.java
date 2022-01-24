@@ -35,17 +35,4 @@ public class StringTest {
         String input = "(1,2)";
         return input.substring(1,input.length()-1);
     }
-
-    @Test
-    void search(){
-         String input = "abc";
-         int[] indices = new int[]{1,3};
-         for(int index: indices){
-             if(index>=input.length()){
-                 shouldThrowOutOfBoundsException(index, input.length());
-             }
-             System.out.printf("character at index %d = %c", index, input.charAt(index));
-             System.out.println();
-         }
-    }
 }

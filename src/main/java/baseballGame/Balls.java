@@ -15,7 +15,7 @@ public class Balls {
     }
 
     // return the play result for each ball
-    public BallStatus playBall(Ball player) {
+    public BallStatus play2Ball(Ball player) {
         return balls.stream()
                 .map((answer) -> answer.play(player))
                 .filter(BallStatus::falseIfNothing)
@@ -23,8 +23,8 @@ public class Balls {
                 .orElse(BallStatus.Nothing);
     }
 
-    // return the play result for the whole game
-    public String playGame(List<Integer> playerList) {
+    // return the play result for set of balls
+    public String play2Balls(List<Integer> playerList) {
         int[] bucket = new int[11]; // 0 ~ 10, 10 = null
         int matchNo = 0;
         int matchAll = 0;

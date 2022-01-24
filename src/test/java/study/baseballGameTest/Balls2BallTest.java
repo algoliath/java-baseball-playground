@@ -28,19 +28,19 @@ class Balls2BallTest
     @Test
     void strike() {
         Ball sample = new Ball(1, 1);
-        assertThat(com.playBall(sample)).isEqualTo(BallStatus.Strike);
+        assertThat(com.play2Ball(sample)).isEqualTo(BallStatus.Strike);
     }
 
     @Test
     void ball() {
         Ball sample = new Ball(1, 2);
-        assertThat(com.playBall(sample)).isEqualTo(BallStatus.Ball);
+        assertThat(com.play2Ball(sample)).isEqualTo(BallStatus.Ball);
     }
 
     @Test
     void nothing() {
         Ball sample = new Ball(2, 3);
-        assertThat(com.playBall(sample)).isEqualTo(BallStatus.Nothing);
+        assertThat(com.play2Ball(sample)).isEqualTo(BallStatus.Nothing);
     }
 
 }
